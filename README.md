@@ -35,7 +35,7 @@ macOS environment
 `python3 Notepad-PyTk.py`
 
 ## Setting method
-In order to set Notepad-PyTk, you need to edit `./files/config.json directly.`
+In order to set Notepad-PyTk, you need to edit `./files/config.json` directly.
 ### Language
 To change the language to Japanese, use `./files/config.json`
 
