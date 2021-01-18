@@ -8,6 +8,7 @@ from tkinter import filedialog
 import tkinter.ttk as ttk
 from tkinter.scrolledtext import ScrolledText
 import datetime
+import webbrowser
 
 root = tk.Tk()
 now = datetime.datetime.now()
@@ -45,7 +46,6 @@ if lang == "Japanese":
     M_FILE = "ファイル(F)"
     M_EDIT = "編集(E)"
     M_TEMP = "テンプレート(T)"
-    M_SETTINGS = "設定(S)"
     M_HELP = "ヘルプ(H)"
 
     M_NEW = "新規作成"
@@ -57,6 +57,9 @@ if lang == "Japanese":
     M_PASTE = "ペースト"
     M_COPYRIGHT = "著作権表記"
     M_TIMEDATE = "日付と時間"
+    M_APPSETTINGS = "アプリ設定(A)"
+    M_SENDFEED = "フィードバックを送信"
+    M_GOGITHUB = "GitHubページを表示"
     M_ABOUT = "このアプリケーションについて"
 else:
     WIN_TITLE = "Notepad-PyTk"
@@ -75,13 +78,23 @@ else:
     M_PASTE = "Paste"
     M_COPYRIGHT = "Copyright"
     M_TIMEDATE = "Time/Date"
+    M_SENDFEED = "Send feedback"
+    M_GOGITHUB = "View GitHub page"
     M_ABOUT = "About - Notepad-PyTk"
 
 
 main_font = font.Font(root, family=font_family, size=font_size)
-__version__ = (1, 0, "a")
+__version__ = (1, 0, "b")
 root.tk.call('wm', 'iconphoto', root._w, tk.PhotoImage(file='./files/Notepad-PyTk.gif'))
 
+
+def sendfeed():
+    url = "https://forms.gle/8wQ6wcHb2eKDNhzu5"
+    webbrowser.open(url)
+
+def gogithub():
+    url = "https://github.com/ryt-frkw/Notepad-PyTk/"
+    webbrowser.open(url)
 
 def about():
     about.win = tk.Toplevel()
@@ -123,7 +136,6 @@ def savefile():
     asf.close()
 
 def openfile():
-    EDIT_TEXTBOX.delete(1.0, tk.END)
     typ = [('', '*')]
     dir = dialogop
     textfile = filedialog.askopenfilename(filetypes=typ, initialdir=dir)
@@ -221,6 +233,9 @@ templatemenu.add_command(label=temp5, command=tempopen5)
 menubar.add_cascade(label=M_TEMP, menu=templatemenu)
 
 helpmenu = tk.Menu(menubar, tearoff=0)
+helpmenu.add_command(label=M_SENDFEED, command=sendfeed)
+helpmenu.add_command(label=M_GOGITHUB, command=gogithub)
+helpmenu.add_separator()
 helpmenu.add_command(label=M_ABOUT, command=about)
 menubar.add_cascade(label=M_HELP, menu=helpmenu)
 
