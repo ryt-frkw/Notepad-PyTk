@@ -5,7 +5,7 @@ Notepad-PyTk is a simple text editor using Python Tkinter.
 
 Notepad-PyTk has the ability to pre-save and load templates. You can save up to 5 templates for this feature.
 
-You can also set the Notepad-PyTk font and font size, background color, characters and cursors, templates, and language in `./files/config.json`.
+You can also set the Notepad-PyTk font and font size, background and characters and cursors color, templates, and language in `./files/config.json`.
 
 For more information on config.json, see Setting method.
 
