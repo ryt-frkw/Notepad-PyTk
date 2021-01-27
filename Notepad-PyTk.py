@@ -57,8 +57,6 @@ if lang == "Japanese":
     M_PASTE = "ペースト"
     M_COPYRIGHT = "著作権表記"
     M_TIMEDATE = "日付と時間"
-    M_APPSETTINGS = "アプリ設定(A)"
-    M_SENDFEED = "フィードバックを送信"
     M_GOGITHUB = "GitHubページを表示"
     M_ABOUT = "このアプリケーションについて"
 else:
@@ -78,7 +76,6 @@ else:
     M_PASTE = "Paste"
     M_COPYRIGHT = "Copyright"
     M_TIMEDATE = "Time/Date"
-    M_SENDFEED = "Send feedback"
     M_GOGITHUB = "View GitHub page"
     M_ABOUT = "About - Notepad-PyTk"
 
@@ -87,10 +84,6 @@ main_font = font.Font(root, family=font_family, size=font_size)
 __version__ = (1, 0, "b")
 root.tk.call('wm', 'iconphoto', root._w, tk.PhotoImage(file='./files/Notepad-PyTk.gif'))
 
-
-def sendfeed():
-    url = "https://forms.gle/8wQ6wcHb2eKDNhzu5"
-    webbrowser.open(url)
 
 def gogithub():
     url = "https://github.com/ryt-frkw/Notepad-PyTk/"
@@ -233,7 +226,6 @@ templatemenu.add_command(label=temp5, command=tempopen5)
 menubar.add_cascade(label=M_TEMP, menu=templatemenu)
 
 helpmenu = tk.Menu(menubar, tearoff=0)
-helpmenu.add_command(label=M_SENDFEED, command=sendfeed)
 helpmenu.add_command(label=M_GOGITHUB, command=gogithub)
 helpmenu.add_separator()
 helpmenu.add_command(label=M_ABOUT, command=about)
