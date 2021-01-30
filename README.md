@@ -13,9 +13,13 @@ For more information on config.json, see Setting method.
 MIT Licence
 
 ## Operating environment
-Works on Windows, Linux and macOS environments.
 
-Python 3 is required to run.
+Files in Python format work on Windows, Linux, and macOS environments.
+
+Python3 is required to execute Python format files.
+
+Also, exe format files can only be executed on Windows.
+
 ## Language
 This software is available in English and Japanese.
 
@@ -33,6 +37,8 @@ Linux environment
 macOS environment
 
 `python3 Notepad-PyTk.py`
+
+Also, if you want to execute an exe format file for Windows, execute `Notepad-PyTk.exe`.
 
 ## Setting method
 In order to set Notepad-PyTk, you need to edit `./files/config.json` directly.
@@ -106,9 +112,11 @@ config.jsonの詳細については、「設定方法」を参照してくださ
 MIT ライセンス
 
 ## 動作環境
-Windows、Linux、macOS環境で動作します。
+Python形式のファイルはWindows、Linux、macOS環境で動作します。
 
-実行するにはPython3が必要です。
+Python形式のファイル実行するにはPython3が必要です。
+
+また、exe形式のファイルはWindowsでのみ実行可能です。
 
 ## 言語
 このソフトウェアは英語と日本語が利用できます。
@@ -127,6 +135,8 @@ Linux環境
 macOS環境
 
 `python3 Notepad-PyTk.py`
+
+また、Windows向けexe形式のファイルを実行する場合は`Notepad-PyTk.exe`を実行してください。
 
 ## 設定方法
 Notepad-PyTk を設定するには、 `./files/config.json` を直接編集する必要があります。
