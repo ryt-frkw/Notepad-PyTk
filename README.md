@@ -1,5 +1,5 @@
 # Notepad-PyTk
-
+[Web(日本語)を参照する場合はクリックしてください。](https://ryt-frkw.github.io/Notepad-PyTk/)
 ## Overview
 Notepad-PyTk is a simple text editor using Python Tkinter.
 
