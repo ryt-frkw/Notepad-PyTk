@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="./Notepad-PyTk.gif">
+    <title>Notepad-PyTk</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <ul class="nav">
+        <li><a href="">Notepad-PyTk</a>
+            <ul>
+                <li><a href="index.html">トップ</a></li>
+                <li><a href="https://github.com/ryt-frkw/Notepad-PyTk">GitHub トップ</a></li>
+            </ul>
+        </li>
+        <li><a href="setting.html">Settings</a></li>
+        <li><a href="">Download</a>
+            <ul>
+                <li><a href="license.html">ライセンス</a></li>
+                <li><a href="download.html">ダウンロード</a></li>
+                <li><a href="run.win.html">Windows搭載環境での実行</a></li>
+                <li><a href="run.lin.html">Linux搭載環境での実行</a></li>
+                <li><a href="run.mac.html">macOS搭載環境での実行</a></li>
+            </ul>
+        </li>
+        <li><a href="">Release</a>
+            <ul>
+                <li><a href="https://github.com/ryt-frkw/Notepad-PyTk/releases">リリース - (GitHub)</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        $(function () {
+            var nav = $('.nav');
+            $('li', nav)
+                .mouseover(function (e) {
+                    $('ul', this).stop().slideDown('fast');
+                })
+                .mouseout(function (e) {
+                    $('ul', this).stop().slideUp('fast');
+                });
+        });
+    </script>
+    <!--------->
+    <section class="home" id="home">
+        <h2 class="title">Linux搭載環境での実行</h2>
+        <p>Linux搭載環境ではPython形式のファイルが利用できます。</p>
+        <table border="1">
+            <tr>
+                <th>バージョン</th>
+                <th>リリース日</th>
+            </tr>
+            <tr>
+                <th><a href="https://github.com/ryt-frkw/Notepad-PyTk/archive/Version-1.0.b.zip">Notepad-PyTk-1.0.b</a>
+                </th>
+                <th>2021/01/30</th>
+            </tr>
+        </table><br>
+        <h3>実行方法</h3>
+        <p>Python3をインストールしてある端末でターミナルを起動し</p>
+        <p>
+            <code>python3 Notepad-PyTk.py</code>
+        </p>
+        <p>と実行すると起動することができます。</p>
+        <p>※Python形式ファイルの実行の際、Visual Studio Code等のエディターの実行機能を使用すると設定ファイルが読み込めずに起動ができません。</p>
+    </section>
+    <!--------->
+</body>
+<footer>
+    <p>Copyright &copy; Ryota Furukawa. All rights reserved.</p>
+</footer>
+
+</html>
